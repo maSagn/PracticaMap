@@ -40,13 +40,13 @@ public class EmployeeController {
             Result result = responseEntity.getBody();
 
             if (result.correct) {
-                model.addAttribute("employees", result.correct);
+                model.addAttribute("employees", result.object);
             } else {
                 model.addAttribute("employees", null);
             }
         }
 
-        return null;
+        return "EmployeeIndex";
 
     }
 
